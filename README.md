@@ -3,22 +3,22 @@
 A blank template for [Payload](https://github.com/payloadcms/payload) to help you get up and running quickly. This repo may have been created by running `npx create-payload-app` and selecting the "blank" template or by cloning this template on [Payload Cloud](https://payloadcms.com/new/clone/blank).
 
 ## Development
-pre-requisit
-`Yarn or NPM`
-`Node.js version 16+`
-Any compatible `database` (MongoDB or Postgres)
-dont't forget to add `mongodb/bin` to your environment
-also if there a cross-env problem `npm install --save-dev cross-env`
-also run the `MongoDB` with the connection string that is on your `.env`
-the `127.0.0.1/(insert here)`, you might want insert that with the name of you project 
+pre-requisit:
+- `Yarn or NPM`.
+- `Node.js version 16+`.
+- Any compatible `database` (MongoDB or Postgres).
+- dont't forget to add `mongodb/bin` to your environment
+- also if there a cross-env problem `npm install --save-dev cross-env`
+- also run the `MongoDB` with the connection string that is on your `.env`
+- the `127.0.0.1/(insert here)`, you might want insert that with the name of you project 
 
 To spin up the project locally, follow these steps:
 
 1. First clone the repo
-1. Then `cd YOUR_PROJECT_REPO && cp .env.example .env` to make the `.env` file
-1. Next `npm run dev` (or `docker-compose up`, see [Docker](#docker)) 
-1. Now `open http://localhost:3000/admin` to access the admin panel
-1. Create your first admin user using the form on the page
+2. Then `cd YOUR_PROJECT_REPO && cp .env.example .env` to make the `.env` file
+3. Next `npm run dev` (or `docker-compose up`, see [Docker](#docker)) 
+4. Now `open http://localhost:3000/admin` to access the admin panel
+5. Create your first admin user using the form on the page
 
 That's it! Changes made in `./src` will be reflected in your app.
 that's where the `collection` are!!
