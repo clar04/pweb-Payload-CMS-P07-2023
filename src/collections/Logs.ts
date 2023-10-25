@@ -1,33 +1,49 @@
-import { CollectionConfig } from 'payload/types'
+import { CollectionConfig } from "payload/types";
 
-const log: CollectionConfig = {
-  slug: 'log',
+const Log: CollectionConfig = {
+  slug: "Log",
   auth: false,
   admin: {
-    useAsTitle: 'logs',
+    useAsTitle: "action",
+  },
+  access: {
+    read: () => true,
   },
   fields: [
     {
-      name: 'Collection',
-      label: 'Collection',
-      type: 'select',
-      options: ['Todo', 'Catagory'],
+      name: "action",
+      label: "Action",
+      type: "select",
+      options: ["Create", "Update", "Delete"],
       required: true,
     },
     {
-      name: 'Action',
-      label: 'Action',
-      type: 'select',
-      options: ['create', 'update', 'delete'],
+      name: "itemType",
+      label: "Koleksi",
+      type: "select",
+      options: ["Todo", "Catagory"], //kalau todo dah ada
       required: true,
     },
     {
-      name: 'Timestamp',
-      label: 'Timestamp',
-      type: 'date',
+      name: "priority",
+      label: "Priority",
+      type: "relationship",
+      relationTo: "Todo, Catagory", // Hubungan dengan collection "Todo" atau "Catagory"
       required: true,
+    },
+    {
+      name: "dateOnly",
+      label: "Time Stamp",
+      type: "date",
+      admin: {
+        date: {
+          pickerAppearance: "dayOnly",
+          displayFormat: "d MMM yyyy, HH:mm",
+        },
+      },
     },
   ],
-}
+};
 
-export default log
+export default Log;
+
