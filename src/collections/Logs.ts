@@ -1,7 +1,7 @@
 import { CollectionConfig } from "payload/types";
 
-const Log: CollectionConfig = {
-  slug: "Log",
+const Logs: CollectionConfig = {
+  slug: "Logs",
   auth: false,
   admin: {
     useAsTitle: "action",
@@ -45,5 +45,5 @@ const Log: CollectionConfig = {
   ],
 };
 
-export default Log;
+export default Logs;
 
