@@ -21,14 +21,14 @@ const Log: CollectionConfig = {
       name: "itemType",
       label: "Koleksi",
       type: "select",
-      options: ["Todo", "Catagory"], //kalau todo dah ada
+      options: ["Todo", "Catagory"], // Kalau todo dah ada
       required: true,
     },
     {
       name: "priority",
       label: "Priority",
       type: "relationship",
-      relationTo: "Todo, Catagory", // Hubungan dengan collection "Todo" atau "Catagory"
+      relationTo: ["Todo", "Catagory"], // Hubungan dengan collection "Todo" atau "Catagory"
       required: true,
     },
     {
