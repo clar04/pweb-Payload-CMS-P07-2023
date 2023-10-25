@@ -9,7 +9,7 @@ import { buildConfig } from 'payload/config'
 import Users from './collections/Users'
 import Category from './collections/Catagory'
 import Todo from './collections/Todo'
-import Log from './collections/Logs'
+import Log from './collections/Log'
 
 
 export default buildConfig({
