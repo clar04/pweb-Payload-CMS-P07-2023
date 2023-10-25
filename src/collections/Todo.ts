@@ -29,7 +29,8 @@ const Todo: CollectionConfig = {
     {
         name: 'checkbox',
         label: 'status',
-        type: 'text',
+        type: "select",
+        options: ["Not_Completed", "Completed"], 
         required: true,
     },
   ],
