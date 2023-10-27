@@ -1,39 +1,42 @@
-import { CollectionConfig } from 'payload/types'
+import { CollectionConfig } from "payload/types";
 
-const Todo: CollectionConfig = {
-  slug: 'Todo',
+const todo: CollectionConfig = {
+  slug: "todo",
   auth: false,
   admin: {
-    useAsTitle: 'Todo',
+    useAsTitle: "todo",
   },
   fields: [
     {
-        name: 'name',
-        label: 'Activity',
-        type: 'text',
-        required: true,
+      name: "title",
+      label: "Task",
+      type: "text",
+      required: true,
     },
     {
-        name: 'Time',
-        label: 'Time',
-        type: 'text',
-        required: true,
+      name: "description",
+      label: "Description",
+      type: "textarea",
     },
     {
-        name: 'catagory',
-        label: 'Priority',
-        type: 'relationship',
-        relationTo: 'Catagory',
-        required: true,
+      name: "time",
+      label: "Deadline",
+      type: "date",
     },
     {
-        name: 'checkbox',
-        label: 'status',
-        type: "select",
-        options: ["Not_Completed", "Completed"], 
-        required: true,
+      name: "catagory",
+      label: "Priority",
+      type: "relationship",
+      relationTo: "Catagory",
+      required: true,
+    },
+    {
+      name: "checkbox",
+      label: "Status",
+      type: "checkbox",
     },
   ],
-}
+};
 
-export default Todo
+export default todo;
+
