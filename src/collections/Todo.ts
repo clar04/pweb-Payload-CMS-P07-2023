@@ -14,11 +14,6 @@ const todo: CollectionConfig = {
       required: true,
     },
     {
-      name: "description",
-      label: "Description",
-      type: "textarea",
-    },
-    {
       name: "time",
       label: "Deadline",
       type: "date",
